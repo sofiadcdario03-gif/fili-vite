@@ -1,5 +1,6 @@
 import './style.css'
 import html2pdf from 'html2pdf.js'
+import photoImage from './assets/photo.jpg'
 
 // Configuration - Customize these values
 const CONFIG = {
@@ -938,7 +939,7 @@ class RomanticApp {
         
         <div class="license-content-row">
           <div class="license-photo">
-            <img src="/src/assets/photo.jpg" alt="License Photo" class="license-photo-img">
+            <img src="${photoImage}" alt="License Photo" class="license-photo-img">
           </div>
           
           <div class="license-body">
