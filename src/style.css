@@ -107,64 +107,62 @@ body {
 .carousel-nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between;
   position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
   z-index: 50;
-  background: rgba(232, 216, 196, 0.95);
-  padding: 15px 25px;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  border: 2px solid var(--primary);
-  backdrop-filter: blur(10px);
+  padding: 0 30px;
+  pointer-events: none;
 }
 
 .carousel-nav .nav-btn {
   background: var(--primary);
   color: var(--white);
-  border: 2px solid var(--primary);
-  width: 50px;
-  height: 50px;
+  border: 2px solid var(--light-bg);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
   box-shadow: var(--shadow-md);
   padding: 0;
-  outline: 2px solid rgba(199, 183, 163, 0.4);
+  outline: 2px solid var(--light-bg);
   outline-offset: -4px;
   position: relative;
+  pointer-events: auto;
+  backdrop-filter: blur(10px);
 }
 
 .carousel-nav .nav-btn:hover {
   background: var(--secondary);
-  border-color: var(--secondary);
+  border-color: var(--light-bg);
   transform: scale(1.1);
-  outline: 2px solid rgba(199, 183, 163, 0.6);
+  outline: 2px solid var(--light-bg);
 }
 
 .carousel-nav .nav-btn::after {
   content: '♥';
   position: absolute;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: var(--accent);
   opacity: 0.7;
 }
 
 #prevBtn::after {
-  right: 8px;
+  right: 6px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 #nextBtn::after {
-  left: 8px;
+  left: 6px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -413,7 +411,7 @@ body {
 
 /* Love Letter Section */
 .love-letter-spacer {
-  height: 80px;
+  height: 40px;
 }
 
 .love-letter-container {
