@@ -770,13 +770,10 @@ class RomanticApp {
         return;
       }
 
-      // Save the name before destroying the form
-      const name = document.getElementById('applicantName').value.trim() || CONFIG.boyfriendName;
-
       this.showLoading();
 
       setTimeout(() => {
-        this.showLicense(name);
+        this.showLicense(name || CONFIG.boyfriendName);
       }, 2000);
     });
 
