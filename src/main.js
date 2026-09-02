@@ -770,10 +770,13 @@ class RomanticApp {
         return;
       }
 
+      // Save the name before destroying the form
+      const name = document.getElementById('applicantName').value.trim() || CONFIG.boyfriendName;
+
       this.showLoading();
 
       setTimeout(() => {
-        this.showLicense();
+        this.showLicense(name);
       }, 2000);
     });
 
@@ -863,13 +866,9 @@ class RomanticApp {
     `;
   }
 
-  showLicense() {
+  showLicense(name) {
     const form = document.getElementById('applicationForm');
     const container = document.getElementById('licenseContainer');
-    
-    // Get the name value before hiding the form
-    const nameInput = document.getElementById('applicantName');
-    const name = nameInput?.value?.trim() || CONFIG.boyfriendName;
     const licenseNumber = this.generateLicenseNumber();
     
     // Hide the form (loading message)
