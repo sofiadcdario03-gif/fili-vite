@@ -866,7 +866,10 @@ class RomanticApp {
   showLicense() {
     const form = document.getElementById('applicationForm');
     const container = document.getElementById('licenseContainer');
-    const name = document.getElementById('applicantName')?.value || CONFIG.boyfriendName;
+    
+    // Get the name value before hiding the form
+    const nameInput = document.getElementById('applicantName');
+    const name = nameInput?.value?.trim() || CONFIG.boyfriendName;
     const licenseNumber = this.generateLicenseNumber();
     
     // Hide the form (loading message)
